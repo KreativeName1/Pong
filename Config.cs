@@ -30,13 +30,13 @@ namespace Pong
         {
             Config config = new Config
             {
-                ComputerMoveSpeed = 0.5,
+                ComputerMoveSpeed = 8,
                 ComputerReactionTime = 0.5,
                 ComputerReactionDelayInSeconds = 1,
                 SameHeightMarginOfError = 10,
                 PlayerMoveSpeed = 10,
                 BallMoveSpeed = 6,
-                GameTickInMS = 10,
+                GameTickInMS = 15,
                 BallSpeedIncrease = 0.5,
                 ComputerSpeedIncrease = 0.5,
                 BallDirectionMultiplier = 2,

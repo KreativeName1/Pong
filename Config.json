@@ -9,7 +9,7 @@
   "ballMoveSpeed": 6,
   "ballDirectionMultiplier": 2,
 
-  "gameTickInMS": 100,
+  "gameTickInMS": 20,
 
   "ballSpeedIncrease": 0.5,
   "computerSpeedIncrease": 0.5
