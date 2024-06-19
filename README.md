@@ -27,4 +27,8 @@ A simple Pong game made in C# using WPF. There are two paddles, one controlled b
 - If the ball is to fast, it can go through the paddle.
 
 ## Screenshots
-**Screenshots here**
+![Screenshot 2024-06-19 122427](https://github.com/KreativeName1/Pong/assets/115576847/7dab7225-e124-46f0-af89-ff925b8898ef)
+
+![Screenshot 2024-06-19 122509](https://github.com/KreativeName1/Pong/assets/115576847/6c102af7-1ad0-46c4-8b9c-ce27264a2580)
+
+![Screenshot 2024-06-19 122536](https://github.com/KreativeName1/Pong/assets/115576847/c809c4ac-5a12-4767-b323-266cb2dd4f0c)
