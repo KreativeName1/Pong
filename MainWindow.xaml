@@ -1,0 +1,35 @@
+﻿<Window x:Class="Pong.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pong"
+        mc:Ignorable="d"
+        KeyDown="Window_KeyDown"
+        Title="Pong" Height="450" Width="800">
+    <Grid x:Name="grid" Background="Black">
+        <Canvas Background="Black" x:Name="game">
+            <Grid  Width="200" x:Name="Scoreboard" Canvas.Left="0" Canvas.Top="0">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Label x:Name="PlayerScore" Content="0" Foreground="White" FontWeight="UltraBold" FontSize="24"/>
+                    <Label Content=":" Foreground="White" FontSize="24" FontWeight="UltraBold"/>
+                    <Label x:Name="ComputerScore" Content="0" Foreground="White" FontWeight="UltraBold" FontSize="24"/>
+                </StackPanel>
+            </Grid>
+            <Rectangle x:Name="player" Fill="Green" Width="20" Height="100" Canvas.Left="10"/>
+            <Ellipse x:Name="ball" Fill="Blue" Width="20" Canvas.Left="300" Canvas.Top="200" Height="20"/>
+            <Rectangle x:Name="computer" Fill="Red" Width="20" Height="100"/>
+            <StackPanel x:Name="PauseMenu" Orientation="Vertical" Width="160" Height="190"  Visibility="Hidden">
+                <TextBlock Text="PAUSE" FontSize="48" Foreground="White"  Height="70" FontWeight="UltraBold">
+                    <TextBlock.Effect>
+                        <DropShadowEffect ShadowDepth="0" Color="Black" BlurRadius="10"/>
+                    </TextBlock.Effect>
+                </TextBlock>
+                <Button x:Name="Resume" Width="100" Content="Resume" Foreground="White" Background="Transparent" FontSize="18"/>
+                <Button x:Name="Restart" Width="100" Content="Restart" Foreground="White" Background="Transparent" FontSize="18"/>
+                <Button x:Name="Settings" Width="100" Content="Settings" Foreground="White" Background="Transparent" FontSize="18"/>
+                <Button x:Name="Quit" Width="100" Content="Quit" Foreground="White" Background="Transparent" FontSize="18"/>
+            </StackPanel>
+        </Canvas>
+    </Grid>
+</Window>

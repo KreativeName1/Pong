@@ -1,0 +1,15 @@
+The Pause Menu can be opened by pressing the Escape key
+
+Explanation of the Config:
+(Can be changed in the Settings in the game or in the Config.json file)
+
+  computerMoveSpeed: The speed of the computer's paddle
+  computerReactionTime: The time it takes for the computer to react to the ball
+  computerReactionDelayInSeconds: The delay in seconds before the computer reacts to the ball
+  sameHeightMarginOfError: Used to prevent the computer from moving up and down too much when the ball is at the same height as the computer's paddle
+  playerMoveSpeed: The speed of the player's paddle (Currently different from the computer's paddle speed)
+  ballMoveSpeed: The speed of the ball
+  ballDirectionMultiplier: How much the balls direction changes when it hits a moving paddle
+  gameTickInMS: The time in milliseconds between each game tick
+  ballSpeedIncrease: The amount the ball's speed increases by when the paddle misses the ball
+  computerSpeedIncrease: The amount the computer's speed increases by when the paddle misses the ball

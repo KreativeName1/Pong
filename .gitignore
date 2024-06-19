@@ -1,0 +1,5 @@
+obj/
+bin/
+.vs/
+AssemblyInfo.cs
+Pong.csproj.user

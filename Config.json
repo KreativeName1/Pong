@@ -1,0 +1,16 @@
+{
+  "computerMoveSpeed": 8,
+  "computerReactionTime": 0.5,
+  "computerReactionDelayInSeconds": 1,
+  "sameHeightMarginOfError": 10,
+
+  "playerMoveSpeed": 10,
+
+  "ballMoveSpeed": 6,
+  "ballDirectionMultiplier": 2,
+
+  "gameTickInMS": 100,
+
+  "ballSpeedIncrease": 0.5,
+  "computerSpeedIncrease": 0.5
+}
