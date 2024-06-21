@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Pong"
         mc:Ignorable="d"
         Background="Black"
-        Title="SettingsWindow" Height="400" Width="350">
+        Title="Settings" Height="400" Width="350">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>

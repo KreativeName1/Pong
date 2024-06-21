@@ -4,6 +4,9 @@
 A simple Pong game made in C# using WPF. There are two paddles, one controlled by the player and the other by the computer. The goal is to hit the ball with the paddle and make the ball go past the opponent's paddle. After each point, the ball will reset to the center of the screen and move in a random direction. The speed of the ball will increase after each point scored.
 
 ## Features
+- Sound effects for ball hitting the paddles and the walls.
+- Start screen
+- Gamemode selection (Currently only one gamemode, Player vs Computer)
 - Score tracking.
 - Pause functionality.
 - Settings menu to change different values like paddle speed, ball speed, etc.
@@ -15,20 +18,18 @@ A simple Pong game made in C# using WPF. There are two paddles, one controlled b
 - Use ESC to pause the game.
 
 ## Planned Features
-- Start menu
 - Local multiplayer
-- Highscore tracking
-- Sound effects
 - Different game modes (maybe)
 - Online multiplayer (maybe)
 
 ## Known Issues
 - The ball sometimes gets stuck in the paddle, causing it to bounce around in weird ways. Happens mostly when the paddle hits the ball at the top/bottom edge or corners.
 - If the ball is to fast, it can go through the paddle.
+- Link to Github crashes the game.
 
 ## Configuration Options
   - computerMoveSpeed: The speed of the computer's paddle
-  - computerReactionTime: The time it takes for the computer to react to the ball
+  - computerReactionTime: The time it takes for the computer to react to the ball (higher value = faster reaction)
   - computerReactionDelayInSeconds: The delay in seconds before the computer reacts to the ball
   - sameHeightMarginOfError: Used to prevent the computer from moving up and down too much when the ball is at the same height as the computer's paddle
   - playerMoveSpeed: The speed of the player's paddle (Currently different from the computer's paddle speed)

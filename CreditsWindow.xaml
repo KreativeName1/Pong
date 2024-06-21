@@ -1,0 +1,22 @@
+﻿<Window x:Class="Pong.CreditsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pong"
+        mc:Ignorable="d"
+        Background="Black"
+        Title="Credits" Height="450" Width="800">
+    <StackPanel>
+        <TextBlock Text="Credits" FontSize="48" Margin="0,0,0,30" Foreground="White" FontWeight="UltraBold" HorizontalAlignment="Center">
+            <TextBlock.Effect>
+                <DropShadowEffect ShadowDepth="0" Color="Black" BlurRadius="10"/>
+            </TextBlock.Effect>
+        </TextBlock>
+        <TextBlock Text="This game was created by:" FontSize="24" Foreground="White" FontWeight="UltraBold" HorizontalAlignment="Center"/>
+        <TextBlock Text="Sascha Dierl" FontSize="24" Foreground="White" FontWeight="UltraBold" HorizontalAlignment="Center"/>
+        <TextBlock FontSize="20" Width="60">
+        <Hyperlink RequestNavigate="Link_RequestNavigate" x:Name="Link" NavigateUri="http://https://github.com/KreativeName1/Pong">Github</Hyperlink>
+        </TextBlock>
+    </StackPanel>
+</Window>

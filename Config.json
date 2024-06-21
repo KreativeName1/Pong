@@ -1,6 +1,6 @@
 {
-  "computerMoveSpeed": 8,
-  "computerReactionTime": 0.5,
+  "computerMoveSpeed": 9,
+  "computerReactionTime": 0.8,
   "computerReactionDelayInSeconds": 1,
   "sameHeightMarginOfError": 10,
 

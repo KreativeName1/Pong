@@ -11,7 +11,7 @@ namespace Pong
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Normal : Window
     {
         private int computerScore = 0;
         private double currentComputerMoveSpeed;
@@ -25,9 +25,12 @@ namespace Pong
         Config? Config = new Config();
         Random random = new Random();
 
+        private readonly string HIT_SOUND = "Sounds/hit.wav";
+        private readonly string SCORE_SOUND = "Sounds/score.wav";
+
 
         private DispatcherTimer? gameTimer;
-        public MainWindow()
+        public Normal()
         {
             InitializeComponent();
             InitializeConfig();
@@ -64,8 +67,11 @@ namespace Pong
                 PauseMenu.Visibility = Visibility.Hidden;
             };
 
-            Quit.Click += (sender, e) =>
+            Menu.Click += (sender, e) =>
             {
+                gameTimer.Stop();
+                StartWindow startWindow = new StartWindow();
+                startWindow.Show();
                 this.Close();
             };
 
@@ -184,6 +190,7 @@ namespace Pong
             // Check collision with player
             if (Canvas.GetLeft(ball) < Canvas.GetLeft(player) + player.Width && Canvas.GetLeft(ball) + ball.Width > Canvas.GetLeft(player) && Canvas.GetTop(ball) < Canvas.GetTop(player) + player.Height && Canvas.GetTop(ball) + ball.Height > Canvas.GetTop(player))
             {
+                PlayHitSound();
                 balldirection = 180  - balldirection + curPlayerMoveSpeed *  Config.BallDirectionMultiplier;
 
             }
@@ -191,6 +198,7 @@ namespace Pong
             // Check collision with computer
             if (Canvas.GetLeft(ball) < Canvas.GetLeft(computer) + computer.Width && Canvas.GetLeft(ball) + ball.Width > Canvas.GetLeft(computer) && Canvas.GetTop(ball) < Canvas.GetTop(computer) + computer.Height && Canvas.GetTop(ball) + ball.Height > Canvas.GetTop(computer))
             {
+                PlayHitSound();
                 balldirection = 180 - balldirection + currentComputerMoveSpeed * Config.BallDirectionMultiplier;
             }
 
@@ -198,6 +206,7 @@ namespace Pong
             if (Canvas.GetLeft(ball) < 0)
             {
                 ComputerScore.Content = ++computerScore;
+                PlayScoreSound();
                 reset();
             }
 
@@ -205,9 +214,28 @@ namespace Pong
             if (Canvas.GetLeft(ball) > game.ActualWidth - ball.Width)
             {
                 PlayerScore.Content = ++playerScore;
+                PlayScoreSound();
                 reset();
             }
 
+        }
+
+        private void PlayScoreSound()
+        {
+            if (System.IO.File.Exists(SCORE_SOUND))
+            {
+                System.Media.SoundPlayer player = new System.Media.SoundPlayer(SCORE_SOUND);
+                player.Play();
+            }
+        }
+
+        private void PlayHitSound()
+        {
+            if (System.IO.File.Exists(HIT_SOUND))
+            {
+                System.Media.SoundPlayer player = new System.Media.SoundPlayer(HIT_SOUND);
+                player.Play();
+            }
         }
 
         private void reset()
