@@ -40,8 +40,12 @@ A simple Pong game made in C# using WPF. There are two paddles, one controlled b
   - computerSpeedIncrease: The amount the computer's speed increases by when the paddle misses the ball
 
 ## Screenshots
+![Start](https://github.com/KreativeName1/Pong/assets/115576847/edf8421f-16ab-4aef-8641-d779b150ccc0)
+
+![Gamemode Selection](https://github.com/KreativeName1/Pong/assets/115576847/19cebdba-419a-4b71-a6d7-5327a0b7ad1a)
+
 ![Game](https://github.com/KreativeName1/Pong/assets/115576847/7dab7225-e124-46f0-af89-ff925b8898ef)
 
-![Pause Menu](https://github.com/KreativeName1/Pong/assets/115576847/6c102af7-1ad0-46c4-8b9c-ce27264a2580)
+![Pause Menu](https://github.com/KreativeName1/Pong/assets/115576847/87eaa88b-97a1-46c5-afed-35f64d017c06)
 
 ![Settings Menu](https://github.com/KreativeName1/Pong/assets/115576847/c809c4ac-5a12-4767-b323-266cb2dd4f0c)
